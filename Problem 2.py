@@ -10,3 +10,4 @@ while(f2<=4000000):
     f1 = temp
 
 print(sum)
+
