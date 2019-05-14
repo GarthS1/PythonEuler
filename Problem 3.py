@@ -25,7 +25,7 @@ def isPrime(n):
 
 
 x = 600851475143
-prime = 1
+prime = 2
 
 while prime < x/2:
     if isPrime(prime) and x % prime == 0:
