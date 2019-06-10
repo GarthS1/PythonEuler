@@ -18,15 +18,11 @@ while a < 1000:
             y = k % 10
             k = k - y
             z = z + (y * (10 ** (c-n)))
-            print(z)
             k = round(k/10)
             n = n + 1
         if z == f:
-            print(z)
-            if(z>total):
+            if z > total:
                 total = z
-        else:
-            print(z, "a")
         b = b + 1
     b = 1
     a = a + 1
