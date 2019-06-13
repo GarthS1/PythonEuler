@@ -1,7 +1,7 @@
 import math
 
 
-def isPrime(n):
+def is_prime(n):  # function for finding a prime number (not written by me)
     if n == 1:
         return False
     elif n < 4:  # 2 and 3 are prime
@@ -24,10 +24,10 @@ def isPrime(n):
         return True  # (in all other cases)
 
 
-x = 600851475143
+x = 600851475143  # number to find prime factors
 prime = 2
 
-while prime < x/2:
-    if isPrime(prime) and x % prime == 0:
+while prime < x/2:  # cancels out half the number which are indivisible
+    if is_prime(prime) and x % prime == 0:  # checks that prime is prime and that it is a divider
         print(prime)
     prime = prime + 1
