@@ -27,6 +27,3 @@ while a < 1000:
     b = 1
     a = a + 1
 print(total)
-
-
-
