@@ -48,11 +48,11 @@ data = list("""
 
 largest_product = 0
 
-for i in range(986):
+for i in range(986):  # continues loop until end of number
     x = int(data[i])
-    for j in range(1, 13):
+    for j in range(1, 13):  # multiplies 13 adjacent digits
         x = x*int(data[i+j])
-    if int(x) > int(largest_product):
+    if int(x) > int(largest_product):  # compares the two numbers
         largest_product = x
 
 print(largest_product)
