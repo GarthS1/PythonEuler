@@ -33,6 +33,6 @@ n = 13  # number to start counting from
 while counter < 10001:
     n += 2  # can increment by 2 as any even number (besides 2) isn't prime
     if is_prime(n):
-        counter += 1
+        counter += 1  # increase counter by 1
 print(n)
 
