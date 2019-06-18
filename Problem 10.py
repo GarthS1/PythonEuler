@@ -30,7 +30,7 @@ def is_prime(n):  # function for finding a prime number (not written by me)
 sum_primes = 17  # start from sum of primes under 10
 
 for i in range(11, 2000000, 2):  # start from 11 and increment by 2 as any even number isn't prime
-    if is_prime(i):
+    if is_prime(i):  # checks prime
         sum_primes += i
 
 print(sum_primes)
