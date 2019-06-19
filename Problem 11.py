@@ -64,4 +64,11 @@ for i in range(0, 17):
         if temp > largest_product:
             largest_product = temp
 
+for i in range(0, 17):
+    for j in range(0, 17):
+        print(data[i][19-j])
+        temp = int(data[i][19-j]) * int(data[i+1][18-j]) * int(data[i+2][17-j]) * int(data[i+3][16-j])
+        if temp > largest_product:
+            largest_product = temp
+
 print(largest_product)
