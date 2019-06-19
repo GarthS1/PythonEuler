@@ -65,6 +65,3 @@ for i in range(0, 17):
             largest_product = temp
 
 print(largest_product)
-
-
-
