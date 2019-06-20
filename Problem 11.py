@@ -24,6 +24,7 @@
 # The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 # What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
+# reformatted data into matrix
 data = [[8, 2, 22, 97, 38, 15, 0, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
         [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 00],
         [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65],
@@ -46,25 +47,26 @@ data = [[8, 2, 22, 97, 38, 15, 0, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8
         [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
 largest_product = 0
-for i in range(0, 20):
+
+for i in range(0, 20):  # loop finds the product for horizontal adjacent
     for j in range(0, 17):
         temp = int(data[i][j]) * int(data[i][j+1]) * int(data[i][j+2]) * int(data[i][j+3])
         if temp > largest_product:
             largest_product = temp
 
-for j in range(0, 20):
+for j in range(0, 20):  # loop finds the product for vertical adjacent
     for i in range(0, 17):
         temp = int(data[i][j]) * int(data[i+1][j]) * int(data[i+2][j]) * int(data[i+3][j])
         if temp > largest_product:
             largest_product = temp
 
-for i in range(0, 17):
+for i in range(0, 17):  # finds diagonal to the right
     for j in range(0, 17):
         temp = int(data[i][j]) * int(data[i+1][j+1]) * int(data[i+2][j+2]) * int(data[i+3][j+3])
         if temp > largest_product:
             largest_product = temp
 
-for i in range(0, 17):
+for i in range(0, 17):  # finds diagonal to the left
     for j in range(0, 17):
         print(data[i][19-j])
         temp = int(data[i][19-j]) * int(data[i+1][18-j]) * int(data[i+2][17-j]) * int(data[i+3][16-j])
