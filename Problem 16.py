@@ -6,7 +6,7 @@ sumx = 0
 x = pow(2, 1000)
 
 while x > 0:
-    sumx += int(x % 10)
+    sumx = sumx + x % 10
     x = int(x - (x % 10))
     x = int(x / 10)
 
