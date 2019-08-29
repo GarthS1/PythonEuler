@@ -13,4 +13,23 @@
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
 
+x = 1  # keeps track of numbers
+Lcounter = 0  # keeps track of Longest Counter
+LongChain = 0  # Keep track of the current number which produces the largest chain
 
+
+while x <= 1000000:  # runs all number under one million
+    temp = x
+    counter = 0  # resets counter
+    while temp > 1:  # runs until reaches 1
+        if temp % 2 == 0:  # runs even sequence
+            temp = int(temp / 2)
+        else:  # runs odd sequence
+            temp = 3*temp + 1
+        counter = counter + 1  # increments counter
+    if counter > Lcounter:  # if produces a larger chain store new number and length of chain
+        Lcounter = counter
+        LongChain = x
+    x = x+1
+
+print(LongChain)  # prints number under one million that makes the longest chain
