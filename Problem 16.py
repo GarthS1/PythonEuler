@@ -2,13 +2,10 @@
 # What is the sum of the digits of the number 21000?
 
 
-sumx = 0
-x = pow(2, 1000)
+sumx = 0  # stores sum
+x = str(2**1000)
 
-while x > 0:
-    sumx = sumx + x % 10
-    x = int(x - (x % 10))
-    x = int(x / 10)
+for n in x:  # calculates sum of all digits
+	sumx += int(n)
 
 print(sumx)
-print(x)
